@@ -2,7 +2,7 @@ import {createContext, useState} from "react";
 
 const FavContext = createContext({
     favourites: [],
-    toalFavourites: 0,
+    totalFavourites: 0,
     addUsrFav: (meetup) => {
     },
     removeUsrFav: (meetupId) => {
@@ -35,7 +35,6 @@ export function FavouritesContextProvider(props) {
     }
 
     function isFavouriteHandler(meetupId) {
-        console.log(usrFavs);
         return usrFavs.some(fav => fav.id === meetupId);
     }
 
